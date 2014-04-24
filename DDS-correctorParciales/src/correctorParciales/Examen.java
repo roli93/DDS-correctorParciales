@@ -1,8 +1,11 @@
 package correctorParciales;
 
+import java.util.Collection;
+import java.util.stream.Stream;
+
 public class Examen {
 	
-	Collection<RespuestaDada> respuestasDadas;
+	private Collection<RespuestaDada> respuestasDadas;
 	MetodoCorreccion metodoCorreccion;
 	
 	public Collection<RespuestaDada> getRespuestasDadas() {
@@ -21,7 +24,7 @@ public class Examen {
 		this.metodoCorreccion = metodoCorreccion;
 	}
 
-	int puntajeTotal(){
+	public float puntajeTotal(){
 		
 		return this.getRespuestasDadas().stream()
 		.map(unaRespuesta->unaRespuesta.puntajeEfectivo())
@@ -29,7 +32,7 @@ public class Examen {
 				
 	}
 	
-	int nota(){
+	public float nota(){
 		
 		return this.getMetodoCorreccion().notaParaExamen(this);	
 		

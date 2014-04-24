@@ -1,5 +1,7 @@
 package correctorParciales;
 
+import java.util.Collection;
+
 public abstract class ConjuntoCriterios {
 	
 	MetodoCorreccion criterios;
