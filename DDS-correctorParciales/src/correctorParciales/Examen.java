@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 public class Examen {
 	
 	private Collection<RespuestaDada> respuestasDadas;
-	MetodoCorreccion metodoCorreccion;
+	private MetodoCorreccion metodoCorreccion;
 	
 	public Collection<RespuestaDada> getRespuestasDadas() {
 		return respuestasDadas;

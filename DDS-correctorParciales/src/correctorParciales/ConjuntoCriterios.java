@@ -15,7 +15,7 @@ public abstract class ConjuntoCriterios {
 		this.criterios = criterios;
 	}
 
-	public Stream<Double> notasDeCriteriosParaExamen(Examen unExamen){		
+	protected Stream<Double> notasDeCriteriosParaExamen(Examen unExamen){		
 		 return this.getCriterios().stream().map(unCriterio -> unCriterio.notaParaExamen(unExamen));
 	}	
 }
