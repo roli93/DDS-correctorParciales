@@ -1,20 +1,18 @@
 package correctorParciales;
-import Examen;
-
 
 public class RestaAlTotal implements MetodoCorreccion {
 	
-	private float valorARestar;
+	private double valorARestar;
 	
-	public void setValorARestar(float unValor) {
+	public void setValorARestar(double unValor) {
 		this.valorARestar=unValor;		
 	}
 	
-	public float getValorARestar() {
+	public double getValorARestar() {
 		return this.valorARestar;
 	}
 	
-	public float notaParaExamen(Examen unExamen){
+	public double notaParaExamen(Examen unExamen){
 		return ((unExamen.puntajeTotal()) - (this.getValorARestar()));
 	}
 

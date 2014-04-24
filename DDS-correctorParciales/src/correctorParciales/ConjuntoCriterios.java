@@ -1,23 +1,21 @@
 package correctorParciales;
 
 import java.util.Collection;
+import java.util.stream.Stream;
 
 public abstract class ConjuntoCriterios {
 	
-	MetodoCorreccion criterios;
+	private Collection<MetodoCorreccion> criterios;
 	
-	public MetodoCorreccion getCriterios() {
+	public Collection<MetodoCorreccion> getCriterios() {
 		return criterios;
 	}
 
-	public void setCriterios(MetodoCorreccion criterios) {
+	public void setCriterios(Collection<MetodoCorreccion> criterios) {
 		this.criterios = criterios;
 	}
 
-	Collection<Double> notasDeCriteriosParaExamen(Examen unExamen){
-		
-		return this.getCriterios().map(unCriterio -> unCriterio.notaParaExamen(unExamen));
-		
-	}
-
+	public Stream<Double> notasDeCriteriosParaExamen(Examen unExamen){		
+		 return this.getCriterios().stream().map(unCriterio -> unCriterio.notaParaExamen(unExamen));
+	}	
 }

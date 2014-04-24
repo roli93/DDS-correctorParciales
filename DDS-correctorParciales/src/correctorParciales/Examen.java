@@ -24,15 +24,13 @@ public class Examen {
 		this.metodoCorreccion = metodoCorreccion;
 	}
 
-	public float puntajeTotal(){
+	public double puntajeTotal(){
 		
-		return this.getRespuestasDadas().stream()
-		.map(unaRespuesta->unaRespuesta.puntajeEfectivo())
-		.sum();
+		return this.getRespuestasDadas().stream().map(unaRespuesta->unaRespuesta.puntajeEfectivo()).reduce(0.0, (a, b) -> a+b);
 				
 	}
 	
-	public float nota(){
+	public double nota(){
 		
 		return this.getMetodoCorreccion().notaParaExamen(this);	
 		

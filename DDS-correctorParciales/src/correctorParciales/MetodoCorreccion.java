@@ -1,9 +1,7 @@
 package correctorParciales;
-import Examen;
-
 
 public interface MetodoCorreccion {
 	
-	public float notaParaExamen(Examen unExamen);
+	public double notaParaExamen(Examen unExamen);
 
 }
