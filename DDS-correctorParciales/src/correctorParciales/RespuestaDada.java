@@ -1,7 +1,7 @@
 package correctorParciales;
 
 public class RespuestaDada {
-	T valor;
+	Object valor;
 	Pregunta preguntaQueContesta;
 	
 	public double puntajeEfectivo(){
@@ -12,11 +12,11 @@ public class RespuestaDada {
 		return this.getPreguntaQueContesta().suRespuestaEs(this.getvalor());
 	}
 
-	public T getvalor() {
+	public Object getvalor() {
 		return valor;
 	}
 
-	public void setvalor(T valor) {
+	public void setvalor(Object valor) {
 		this.valor = valor;
 	}
 

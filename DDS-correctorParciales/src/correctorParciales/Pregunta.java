@@ -1,13 +1,13 @@
 package correctorParciales;
 
 public class Pregunta {
-	T respuestaCorrecta;
+	Object respuestaCorrecta;
 	int pesoEspecifico;
 	
-	public T getRespuestaCorrecta() {
+	public Object getRespuestaCorrecta() {
 		return respuestaCorrecta;
 	}
-	public void setRespuestaCorrecta(T respuestaCorrecta) {
+	public void setRespuestaCorrecta(Object respuestaCorrecta) {
 		this.respuestaCorrecta = respuestaCorrecta;
 	}
 	public int getPesoEspecifico() {
@@ -17,7 +17,7 @@ public class Pregunta {
 		this.pesoEspecifico = pesoEspecifico;
 	}
 	
-	public boolean suRespuestaEs(T valorDado){
+	public boolean suRespuestaEs(Object valorDado){
 		return valorDado.equals(this.getRespuestaCorrecta());
 	}
 
