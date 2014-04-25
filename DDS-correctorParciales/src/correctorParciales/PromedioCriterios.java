@@ -1,13 +1,15 @@
 package correctorParciales;
-import java.util.Collection;
-import java.util.stream.Stream;
 
+import java.util.stream.DoubleStream;
 
-public final class PromedioCriterios extends ConjuntoCriterios {
+public class PromedioCriterios extends ConjuntoCriterios {
 
 	public double notaParaExamen(Examen unExamen) {
-	return	this,promedioPara(super.notasDeCriteriosParaExamen(unExamen));
+		return this.promedio(super.notasDeCriteriosParaExamen(unExamen));
 	}
- double promedio(Collection<double> notas){
-	 return notas.stream().sum() / notas.stream().count();
- }
+	
+	double promedio(DoubleStream notas){
+		 return notas.sum() / notas.count();
+	}
+
+}

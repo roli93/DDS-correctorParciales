@@ -1,7 +1,7 @@
 package correctorParciales;
 
 import java.util.Collection;
-import java.util.stream.Stream;
+import java.util.stream.DoubleStream;
 
 public abstract class ConjuntoCriterios {
 	
@@ -15,7 +15,7 @@ public abstract class ConjuntoCriterios {
 		this.criterios = criterios;
 	}
 
-	protected Stream<Double> notasDeCriteriosParaExamen(Examen unExamen){		
-		 return this.getCriterios().stream().map(unCriterio -> unCriterio.notaParaExamen(unExamen));
+	protected DoubleStream notasDeCriteriosParaExamen(Examen unExamen){		
+		 return this.getCriterios().stream().mapToDouble(unCriterio -> unCriterio.notaParaExamen(unExamen));
 	}	
 }
