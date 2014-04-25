@@ -6,7 +6,7 @@ import org.junit.Test;
 public class RespuestaDadaTest {
 
 	@Test
-	public void test() {
+	public void testRespondiendoBien() {
 		Pregunta preguntaDeCualidades = new Pregunta();
 		preguntaDeCualidades.setPesoEspecifico(1);
 		preguntaDeCualidades.setRespuestaCorrecta('B');
