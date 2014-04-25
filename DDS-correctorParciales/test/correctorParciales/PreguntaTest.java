@@ -6,7 +6,7 @@ import org.junit.Test;
 public class PreguntaTest {
 
 	@Test
-	public void test() {
+	public void testEnElQueElAlumnoRespondeMal() {
 		Pregunta laQueEsSobreTesting=new Pregunta();
 		laQueEsSobreTesting.setPesoEspecifico(1);
 		laQueEsSobreTesting.setRespuestaCorrecta("Debuggear puede llevar mucho tiempo.");
