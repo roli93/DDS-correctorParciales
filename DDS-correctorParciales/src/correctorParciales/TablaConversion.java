@@ -12,10 +12,6 @@ public class TablaConversion implements MetodoCorreccion {
 		return this.paresConversion;
 	}
 
-	public Stream<ParDeConversion> getStreamDePares() {
-		return this.getParesConversion().stream();
-	}
-
 	public void setNuevoParConversion(double unPuntaje,
 			double unaNotaCorrespondiente) {
 		ParDeConversion unPar = new ParDeConversion(unPuntaje,
@@ -25,9 +21,9 @@ public class TablaConversion implements MetodoCorreccion {
 	}
 
 	public double notaParaExamen(Examen unExamen) {
-		return this.getStreamDePares()
+		return this.getParesConversion().stream()
 				.filter(par -> par.coincideCon(unExamen.puntajeTotal()))
-				.findFirst().get().getPuntaje();
+				.findFirst().get().getNotaCorrespondiente();
 	}
 
 }
