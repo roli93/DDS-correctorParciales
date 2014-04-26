@@ -34,7 +34,10 @@ public class TablaConversionTest {
 		examen.setMetodoCorreccion(tablita);
 		examen.setRespuestasDadas(respuestas);
 		
-		tablita.setNuevoParConversion(10,5);
+		for(int i =0;i<20;i++){
+			tablita.setNuevoParConversion(i,i-1);
+		}
+		
 		
 		assertTrue(tablita.notaParaExamen(examen)==5);
 		
