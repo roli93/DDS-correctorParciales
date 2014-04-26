@@ -22,7 +22,7 @@ public class ParDeConversion {
 	}
 	
 	public boolean coincideCon(double unPuntaje){
-		return (this.getPuntaje() == unPuntaje);
+		return (this.getPuntaje()==(unPuntaje));
 	}
 	
 	public ParDeConversion(double unPuntaje, double unaNota){

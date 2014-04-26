@@ -27,7 +27,7 @@ public class TablaConversion implements MetodoCorreccion {
 	public double notaParaExamen(Examen unExamen) {
 		return this.getStreamDePares()
 				.filter(par -> par.coincideCon(unExamen.puntajeTotal()))
-				.findAny().get().getNotaCorrespondiente();
+				.findFirst().get().getPuntaje();
 	}
 
 }

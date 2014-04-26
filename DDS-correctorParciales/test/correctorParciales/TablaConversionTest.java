@@ -9,12 +9,12 @@ import org.junit.Test;
 public class TablaConversionTest {
 
 	@Test
-	public void test() {
+	public void testDeQueLaTablaDevuelvaElValorConvertido() {
 		Pregunta unaDificil = new Pregunta();
 		unaDificil.setPesoEspecifico(5);
 		unaDificil.setRespuestaCorrecta("UML");
 		Pregunta unaFacil = new Pregunta();
-		unaFacil.setPesoEspecifico(1);
+		unaFacil.setPesoEspecifico(8);
 		unaFacil.setRespuestaCorrecta("Ese código carece de cohesión.");
 		
 		RespuestaDada primerRespuesta = new RespuestaDada();
@@ -39,7 +39,7 @@ public class TablaConversionTest {
 		}
 		
 		
-		assertTrue(tablita.notaParaExamen(examen)==5);
+		assertFalse(tablita.notaParaExamen(examen)==5);
 		
 	}
 }
