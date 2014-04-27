@@ -3,7 +3,7 @@ DDS-correctorParciales
 
 Simple sistema de corrección de parciales, creado para el Trabajo Práctico 3 de la asignatura Diseño de Sisitemas, UTN-FRBA
 
-Decisiones de Diseño
+>Decisiones de Diseño
 
 Para el modelado del dominio de la corrección de parciales se han tomado diversas decisiones en el diseño, con el fin de mejorar algunas de sus cualidades. 
 
@@ -15,3 +15,7 @@ Asimismo, dados los requerimientos de resolver la corrección de parciales, y la
 
 Se ha del mismo modo definido una clase abstracta con el fin de nuclear en ella comportamiento que es común a sus clases hijas,  evitando la repetición de lógica en estas últimas y permitiendo reutilizar ese comportamiento.
 Finalmente podemos decir que se ha decidido reducir el acoplamiento existente entre las clases Pregunta y RespuestaDada al momento de verificar la corrección de una respuesta: en lugar de que la respuesta obtenga atributos de la pregunta para contrastarlos con su valor, lo cual generaría mayor dependencia en la respuesta de detalles internos de la pregunta,  se delega en el mensaje suRespuestaEs() que se encarga de cotejar si la respuesta dada es correspondiente a la pregunta. 
+
+>Diagrama de clases
+
+https://www.lucidchart.com/publicSegments/view/535c895e-fc14-4a41-9932-7d030a00cf0a/image.png
