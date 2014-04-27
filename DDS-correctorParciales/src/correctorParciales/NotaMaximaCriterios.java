@@ -1,10 +1,8 @@
 package correctorParciales;
 
-import java.util.OptionalDouble;
-
 public class NotaMaximaCriterios extends ConjuntoCriterios {
 
-	public OptionalDouble notaParaExamen(Examen unExamen) {
-		return super.notasDeCriteriosParaExamen(unExamen).max();
+	public Double notaParaExamen(Examen unExamen) {
+		return super.notasDeCriteriosParaExamen(unExamen).stream().mapToDouble(unaNota->unaNota).max().getAsDouble();
 	}
 }

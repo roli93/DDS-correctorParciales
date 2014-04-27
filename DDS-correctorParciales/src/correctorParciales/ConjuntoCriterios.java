@@ -1,21 +1,26 @@
 package correctorParciales;
 
-import java.util.Collection;
-import java.util.stream.DoubleStream;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public abstract class ConjuntoCriterios implements MetodoCorreccion {
 	
-	private Collection<MetodoCorreccion> criterios;
+	private List<MetodoCorreccion> criterios;
 	
-	public Collection<MetodoCorreccion> getCriterios() {
+	public List<MetodoCorreccion> getCriterios() {
 		return criterios;
 	}
 
-	public void setCriterios(Collection<MetodoCorreccion> criterios) {
+	public void setCriterios(List<MetodoCorreccion> criterios) {
 		this.criterios = criterios;
 	}
 
-	protected DoubleStream notasDeCriteriosParaExamen(Examen unExamen){		
-		 return this.getCriterios().stream().mapToDouble(unCriterio -> unCriterio.notaParaExamen(unExamen));
+	protected List<Double> notasDeCriteriosParaExamen(Examen unExamen){	
+			
+	     return this.getCriterios().stream().map(unCriterio->unCriterio.notaParaExamen(unExamen)).collect(Collectors.toList());
+		
+
 	}	
+	
 }

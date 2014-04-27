@@ -2,7 +2,6 @@ package correctorParciales;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.stream.Stream;
 
 public class TablaConversion implements MetodoCorreccion {
 
@@ -20,7 +19,7 @@ public class TablaConversion implements MetodoCorreccion {
 
 	}
 
-	public double notaParaExamen(Examen unExamen) {
+	public Double notaParaExamen(Examen unExamen) {
 		return this.getParesConversion().stream()
 				.filter(par -> par.coincideCon(unExamen.puntajeTotal()))
 				.findFirst().get().getNotaCorrespondiente();

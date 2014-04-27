@@ -1,7 +1,8 @@
 package correctorParciales;
 
+
 public interface MetodoCorreccion {
 	
-	public double notaParaExamen(Examen unExamen);
+	public Double notaParaExamen(Examen unExamen);
 
 }

@@ -12,7 +12,7 @@ public class RestaAlTotal implements MetodoCorreccion {
 		return this.valorARestar;
 	}
 	
-	public double notaParaExamen(Examen unExamen){
+	public Double notaParaExamen(Examen unExamen){
 		return ((unExamen.puntajeTotal()) - (this.getValorARestar()));
 	}
 
