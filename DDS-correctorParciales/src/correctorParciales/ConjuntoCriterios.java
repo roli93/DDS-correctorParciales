@@ -3,7 +3,7 @@ package correctorParciales;
 import java.util.Collection;
 import java.util.stream.DoubleStream;
 
-public abstract class ConjuntoCriterios {
+public abstract class ConjuntoCriterios implements MetodoCorreccion {
 	
 	private Collection<MetodoCorreccion> criterios;
 	
